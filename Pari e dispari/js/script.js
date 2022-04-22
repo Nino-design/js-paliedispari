@@ -27,13 +27,15 @@ function pcNumber(value){
 
 
   function evenOrOdd(numSum){
+      let evenOrOdd = 'dispari';
       if(numSum % 2 === 0){
+          evenOrOdd = 'pari';
           console.log('Numero è pari');
       }else{
           console.log('Numero è dispari');
       }
 
-      return numSum;
+      return evenOrOdd;
   }
 
   const result = evenOrOdd(sum);
@@ -41,18 +43,8 @@ function pcNumber(value){
   console.log(result);
 
 
-  function winner(sumResult,choice){
-      if(sumResult % 2 === 0 && choice % 2 === 0){
-          console.log('Hai vinto');
-      }else if(sumResult % 2 !== 0 && choice % 2 !== 0){
-          console.log('Hai vinto');
-      }else{
-          console.log('Hai perso');
-      }
-
-      return sumResult,choice;
-  }
-
-  const outcome = winner(result, userChoice);
-
-  console.log(outcome);
+ if(result === userChoice){
+     console.log('Hai vinto');
+ }else{
+     console.log('Hai perso');
+ }
